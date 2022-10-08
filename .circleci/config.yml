@@ -132,13 +132,9 @@ jobs:
             # Your code here
             cd frontend
             npm install
-            # npm install oauth-sign@^0.9.0
+            npm install oauth-sign@^0.9.0
+            npm audit fix --audit-level=critical --force
             npm audit --audit-level=critical
-            # cd frontend
-            # npm install
-            # # npm install oauth-sign@^0.9.0
-            # npm audit fix --audit-level=critical --force
-            # npm audit --audit-level=critical
       - save_cache:
           paths: [frontend/node_modules]
           key: scanfrontend-test
@@ -161,13 +157,9 @@ jobs:
             # Your code here
             cd backend
             npm install
-            # npm install oauth-sign@^0.9.0
+            npm install oauth-sign@^0.9.0
+            npm audit fix --audit-level=critical --force
             npm audit --audit-level=critical
-            # cd backend
-            # npm install
-            # # npm install oauth-sign@^0.9.0
-            # npm audit fix --audit-level=critical --force
-            # npm audit --audit-level=critical
       - save_cache:
           paths: [backend/node_modules]
           key: scanbackend-test
